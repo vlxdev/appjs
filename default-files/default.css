@@ -1,0 +1,29 @@
+/*
+@font-face { font-family: "OpenSans Regular"; src: url("../res/fonts/opensans-regular.ttf"); }
+*/
+
+html { width:100%; height:100%; }
+html * { box-sizing:border-box; background-repeat:no-repeat; }
+body { margin:0px; width:100%; height:100%; background:#ffffff; overflow:hidden; }
+
+ul {list-style-type:none; padding:0px; margin:0px; }
+textarea{resize: none;}
+input:focus,button,textarea:focus {outline:0px;}
+.flexHVCenter { display:flex;  justify-content:center;  align-items:center; }
+.ellipsis{  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.noSelect {  -webkit-touch-callout:none; -webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;-ms-user-select: none;user-select:none; cursor:default; }
+
+#gridContainer {
+	display:grid;
+	grid-template-columns: 20% auto 10%;
+	grid-template-rows: 72px 1fr 200px ;
+	grid-template-areas: 
+		"h h h"
+		"l c r"
+		"f x x";
+	min-height:600px;
+}
+
+#gridComponent { 
+	grid-area:h;  
+}
